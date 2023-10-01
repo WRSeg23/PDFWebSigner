@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Lato, Arial;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  padding: 55px 25px;
+  background-color: #1a1a1a;
+}
+h1 {
+  font-weight: normal;
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+h1 span {
+  font-size: 17px;
+  display: block;
+  padding-left: 4px;
+}
+p {
+  margin-top: 100px;
+}
+p a {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  color: #111;
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #fafafa;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+p a:hover {
+  background-color: #f2f2f2;
+}
+.custom-file-upload-hidden {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
+}
+.custom-file-upload {
+  display: block;
+  width: auto;
+}
+.custom-file-upload label {
+  display: block;
+  margin-bottom: 5px;
+}
+.file-upload-wrapper {
+  position: relative;
+  margin-bottom: 5px;
+}
+.file-upload-input {
+  width: 300px;
+  color: #111;
+  font-size: 16px;
+  padding: 11px 17px;
+  border: none;
+  background-color: #fff;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  float: left;
+  /* IE 9 Fix */
+}
+.file-upload-input:hover,
+.file-upload-input:focus {
+  background-color: #f2f2f2;
+  outline: none;
+}
+.file-upload-button {
+  cursor: pointer;
+  display: inline-block;
+  color: #111;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 11px 20px;
+  border: none;
+  margin-left: -1px;
+  background-color: #e6e6e6;
+  float: left;
+  /* IE 9 Fix */
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.file-upload-button:hover {
+  background-color: #cccccc;
+}
+.alerta {
+  color: #dc3545;
+  margin-top: 55px;
+  font-size: 17px;
+}
+.btn-alerta {
+  background-color: #dc3545;
+  color: #e6e6e6;
+}
+label,
+.submit {
+  margin-top: 5px;
+  font-size: 18px;
+}
+.submit {
+  width: 513.72px;
+  margin-top: 20px;
+}
+
+/* Check Button */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.simple-link {
+  background-color: transparent;
+  color: white;
+  text-decoration: underline;
+  text-transform: initial;
+  margin: 0;
+  padding: 0;
+}
+.simple-link:hover {
+  background-color: transparent;
+}
