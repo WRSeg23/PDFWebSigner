@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ $1 ] && [ -d $1 ] || { echo "Use: $0 <shared_certificate_dir>"; exit; }
+[ $1 ] && [ -d $1 ] || { echo "Use: $0 <shared_dir>"; exit; }
 
 ./run_demo_browser.sh &> /dev/null &
 
