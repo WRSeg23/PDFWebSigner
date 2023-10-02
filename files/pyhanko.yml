@@ -1,0 +1,25 @@
+pkcs12-setups:
+  p12dlk:
+    pfx-file: ../files/certificado.p12
+    pfx-passphrase: <SUA SENHA>
+stamp-styles:
+  default:
+    type: text
+    background: ../files/estampa.png
+    stamp-text: "Assinado digitalmente por:\n%(signer)s\nEm: %(ts)s"
+    timestamp_format: "%d/%m/%Y"
+    background-opacity: 0.9
+    background-layout:
+      x-align: left
+      margins:
+        top: 5
+        left: 5
+    text-box-style:
+      font: /usr/share/fonts/truetype/noto/NotoSerif-Regular.ttf
+      leading: 28
+      box-layout-rule:
+        margins:
+          left: 120
+          top: 0
+          right: 20
+          bottom: 20
