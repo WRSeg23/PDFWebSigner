@@ -1,3 +1,3 @@
 #!/bin/bash
 sleep 3
-firefox localhost:80 &> /dev/null &  
+firefox http://localhost:8888 &> /dev/null &  

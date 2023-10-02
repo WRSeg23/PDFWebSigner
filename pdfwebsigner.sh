@@ -1,6 +1,10 @@
 #!/bin/bash
 
-./run_demo_docker.sh &> log_demo_docker.txt &  
+sudo docker images 
 
-./run_demo_browser.sh &> log_demo_browser.txt & 
+./run_demo_docker.sh &> logs/demo_docker.log &  
+
+sleep 5
+
+./run_demo_browser.sh &> logs/demo_browser.log & 
 
