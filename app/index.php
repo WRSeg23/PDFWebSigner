@@ -39,10 +39,10 @@ function encapsula_erros($erros){
  */
 function verifica_pyhanko_cfg(){
   $erros = "";
-  $assinatura = file_exists(getcwd().'/signature/assinatura.p12');
-  $pyhanko_cfg = file_exists(getcwd() . '/signature/pyhanko.yml');
+  $assinatura = file_exists(getcwd().'/files/certificado.p12');
+  $pyhanko_cfg = file_exists(getcwd() . '/files/pyhanko.yml');
   if (!$assinatura) {
-    $erros = 'Arquivo de assinatura (assinatura.p12) não encontrado.<br>';
+    $erros = 'Arquivo do certificado PKCS#12 (certificado.p12) não encontrado.<br>';
   } 
   if (!$pyhanko_cfg) {
     $erros .= 'Arquivo de configuração do pyhanko (pyhanko.yml) não encontrado.';
