@@ -1,8 +1,5 @@
 # Assinaturas
-app/signature/*.p12
-
-# Arquivo contendo configurações e senha da assinatura
-app/signature/pyhanko.yml
+files/*
 
 # Arquivos gerados
 app/output/
