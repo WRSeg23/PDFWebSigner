@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
+html, body {
+  height: 100%;
+}
 * {
   margin: 0;
   padding: 0;

@@ -1,4 +1,4 @@
-FROM  sf23/pdfwebsigner:latest
+FROM sf23/pdfwebsigner:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG DEBCONF_NOWARNINGS=yes
