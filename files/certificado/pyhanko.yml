@@ -1,7 +1,7 @@
 pkcs12-setups:
   p12dlk:
     pfx-file: ../files/certificado/certificado.p12
-    pfx-passphrase:                     
+    pfx-passphrase: <SENHA DO CERTIFICADO> 
 stamp-styles:
   default:
     type: text
