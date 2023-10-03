@@ -1,11 +1,11 @@
 pkcs12-setups:
   p12dlk:
-    pfx-file: ../files/certificado.p12
+    pfx-file: ../files/certificado/certificado.p12
     pfx-passphrase: <SENHA DO SEU CERTIFICADO>
 stamp-styles:
   default:
     type: text
-    background: ../files/estampa.png
+    background: ../examples/example.png
     stamp-text: "Assinado digitalmente por:\n%(signer)s\nEm: %(ts)s"
     timestamp_format: "%d/%m/%Y"
     background-opacity: 0.9
