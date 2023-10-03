@@ -1,4 +1,4 @@
-var pdfFileName = "upload/" + $("#pdf-inp").val() + ".pdf";
+var pdfFileName = "files/pdf/" + $("#pdf-inp").val() + ".pdf";
 
 var pdf = new PDFAnnotate("pdf-container", pdfFileName, {
   onPageUpdated(page, oldData, newData) {},
