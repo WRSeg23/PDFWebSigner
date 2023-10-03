@@ -39,8 +39,8 @@ function encapsula_erros($erros){
  */
 function verifica_pyhanko_cfg(){
   $erros = "";
-  $assinatura = file_exists(getcwd().'/files/certificado.p12');
-  $pyhanko_cfg = file_exists(getcwd() . '/files/pyhanko.yml');
+  $assinatura = file_exists(getcwd().'/files/certificado/certificado.p12');
+  $pyhanko_cfg = file_exists(getcwd() . '/files/certificado/pyhanko.yml');
   if (!$assinatura) {
     $erros = 'Arquivo do certificado PKCS#12 (certificado.p12) não encontrado.<br>';
   } 
@@ -81,14 +81,14 @@ function verificar_pdf() {
  */
 function salvar_pdf($arquivo){
   // Cria o diretório upload, se ele não existir.
-  if (!is_dir(getcwd() . '/upload/')) {
-    mkdir(getcwd() . '/upload/');
+  if (!is_dir(getcwd() . '/files/pdf/')) {
+    mkdir(getcwd() . '/files/pdf/');
   }
 
   // Gera um nome aleatório para o arquivo PDF.
   do {
     $nome = substr(md5(rand().rand()), 0, 8);
-    $caminho = getcwd() . '/upload/' . $nome . '.pdf';
+    $caminho = getcwd() . '/files/pdf/' . $nome . '.pdf';
   } while (file_exists($caminho));
 
   $sucesso = move_uploaded_file($arquivo['tmp_name'], $caminho);
