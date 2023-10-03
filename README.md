@@ -1,34 +1,34 @@
 # PDFWebSigner
 
-Interface web intuitiva para posicionamento e geração de PDFs assinados com pyHanko.
+Interface web intuitiva para posicionamento de assinatura digital e geração de PDFs assinados com pyHanko.
 
 ## 1. Objetivos
 
-Software desenvolvido em PHP e Javascript que utiliza bibliotecas Python.
-Este software possui um editor que permite selecionar o lugar onde inserir uma assinatura digital em um documento PDF. Ele utiliza a biblioteca pyHanko do Python, e também têm a funcionalidade de gerar apenas as coordenadas para o pyHanko.
+Software desenvolvido em PHP e Javascript, que faz uso da biblioteca pyHanko, do Python para a geração de arquivos assinados digitalmente. Possui um editor intuitivo que permite a seleção do local de inserção da assinatura no documento PDF.
 
 ## 2. Forma de uso
 
-Ma primeira tela é possível carregar o arquivo PDF que será utilizado e a assinatura digital (opcional). No campo manter assinatura, é possível manter a assinatura salva para não precisar carregá-la a cada uso.
-Depois, basta clicar em enviar e em seguida selecionar o local onde a assinatura será salva. Também é possível ajustar o tamanho da caixa da assinatura.
-Em seguida, basta selecionar se deseja apenas as coordenadas do pyHanko ou o PDF inteiro gerado com assinatura.
+Ma primeira tela é possível carregar o arquivo PDF que será utilizado.
+Depois, basta clicar em enviar e em seguida selecionar o local onde a assinatura será salva. Também é possível ajustar o tamanho da caixa da assinatura, e clicar em assinar, onde será redirecionado para o arquivo PDF assinado.
 
 ## 3. Configurações
 
 Este software requer uma máquina linux para ser instalado. Podendo ser instalado na máquina virtual, ou em um container Docker.
-Caso queira instalar via Docker, pule para o item 3.1, caso deseja instalar manualmente em uma máquina virtual, pule para 3.2;
+Para instalação manual, pule para o item 3.2;
 
 ### 3.1 Instalação Docker
 
-Após baixar o repositório, certifique-se de ter o Docker instalado e rodando, e em seguida, baixe este respositório para a pasta desejada.
+Certifique-se de ter o Docker instalado e rodando. Em seguida, é necessário clonar este respositório para a pasta desejada.
 
-Também será necessário compartilhar a pasta deste repositório com o Docker, de modo que seja possível a persistência dos arquivos: [Como compartilhar pastas com o Docker](https://docs.docker.com/desktop/settings/windows/#file-sharing).
+O usuário pode utilizar o script ./pdfwebsigner.sh para informar o diretório (ou volume) compartilhado que contém o arquivo de configuração do pyHanko e o certificado digital e instanciar um container Docker do PDFWebSigner.
 
-Abra o terminal (No Windows, é o Prompt de Comando) e navegue até a pasta em que a aplicação foi baixada, e em seguida digite o seguinte comando:
+O usuário necessita configurar o arquivo do pyHanko uma única vez, informando o caminho do certificado digital e a senha (e.g., parâmetro pfx-passphrase) necessária para realizar a assinatura digital. Atualmente, por questões de simplicidade e praticidade, a senha fica armazenada no arquivo de configuração do pyHanko. 
 
-    docker compose up
 
-Pronto! Para acessar a aplicação, basta acessar o localhost no seu navegador.
+O script ./pdfwebsigner.sh irá tentar detectar e abrir automaticamente um navegador apontando para a URL do container Docker.
+
+Pronto! Caso a url não seja aberta automaticamente, é possível acessar a aplicação através do endereço: http://127.0.0.1:8888.
+
 
 ### 3.2 Instalação em Linux
 
@@ -58,7 +58,7 @@ Agora, é necessário instalar as bibliotecas do Python no usuário do servidor 
 Em seguida, entre na pasta e clone este repositório:
 
     cd /var/www/html
-    git clone https://github.com/mauricioeluri/assinador-pdf.git
+    git clone https://github.com/WRSeg23/PDFWebSigner.git
 
 ### 3.3 Configuração da Assinatura
 
