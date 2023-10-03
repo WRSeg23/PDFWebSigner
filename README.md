@@ -1,6 +1,6 @@
-# Assinador de PDFs
+# PDFWebSigner
 
-Assinador de documentos PDF com assinatura eletrônica.
+Interface web intuitiva para posicionamento e geração de PDFs assinados com pyHanko.
 
 ## 1. Objetivos
 
