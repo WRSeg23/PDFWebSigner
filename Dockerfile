@@ -10,5 +10,6 @@ RUN apt-get install -y wget vim net-tools
 RUN rm -rf /var/www/html/*
 ADD ./app /var/www/html
 WORKDIR /var/www/html
+RUN usermod --uid 1000 www-data
 
 EXPOSE 80
