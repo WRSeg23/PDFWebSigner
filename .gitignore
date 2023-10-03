@@ -1,8 +1,5 @@
-# Assinaturas
-files/*
+# Certificado
+files/certificado/*
 
-# Arquivos gerados
-app/output/
-
-# Pasta de uploads
-app/upload/
+# Arquivos PDF
+files/pdf/*

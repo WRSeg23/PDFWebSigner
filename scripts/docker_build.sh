@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t sf23/pdfwebsigner:latest . 
+sudo docker build -t sf23/pdfwebsigner:latest . 
