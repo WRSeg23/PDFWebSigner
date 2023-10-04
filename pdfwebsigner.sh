@@ -4,7 +4,7 @@ print_line(){
     echo "========================================================================="
 }
 
-sudo docker images &> /dev/null 
+sudo docker info &> /dev/null 
 [ $? -eq 0 ] || {
     echo ""
     print_line
@@ -31,10 +31,20 @@ echo "done."
 print_line
 echo ""
 
+which firefox &> /dev/null
+[ $? -eq 0 ] || {
+    print_line
+    echo "[ALERTA] script configurado para executar o \"firefox\""
+    echo "    Abra a URL http://127.0.0.1:8888 no seu navegador"
+    print_line
+    echo ""
+    echo -n "Precione uma tecla e <ENTER> para continuar: "
+    read WAIT
+}
 
 print_line
 echo -n "Inicializando o navegador ... "
-./run_demo_browser.sh &> logs/demo_browser.log & 
+firefox http://localhost:8888 &> logs/demo_browser.log & 
 sleep 1
 echo "done."
 print_line
@@ -45,7 +55,5 @@ echo "Monitorando os logs de execução do container Docker ... "
 echo "          <precione Ctrl+C para finalizar>"
 print_line
 echo ""
-
-sleep 2
 
 tail -f logs/demo_docker.log 
