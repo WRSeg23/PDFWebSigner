@@ -1,7 +1,6 @@
 # PDFWebSigner
 
-Interface web intuitiva para posicionamento da estampa visual e assinatura digital de documentos PDF utilizando o [pyHanko](https://github.com/MatthiasValvekens/pyHanko).
-
+Interface web intuitiva para posicionamento de assinatura digital e geração de PDFs assinados com pyHanko.
 
 ## 1. Objetivos
 
