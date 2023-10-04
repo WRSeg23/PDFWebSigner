@@ -5,6 +5,9 @@ Interface web intuitiva para posicionamento da estampa visual e assinatura digit
 ## Passo-a-passo (utilização simples e rápida)
 
 1. **Substituir** o arquivo do certificado PKCS#12 em **files/certificado/certificado.p12** (e.g., gerar um certificado .p12 [ICPEdu - Certificado Pessoal](https://pessoal.icpedu.rnp.br))
+```bash
+$ cp ~/CAMINHO/MEU-CERTIFICADO.p12 files/certificado/certificado.p12
+```
 2. **Substituir** a senha do certificado PKCS#12 no arquivo **files/certificado/pyhanko.yml** (use o seu editor preferido)
 ```bash
 $ vim files/certificado/pyhanko.yml
@@ -15,7 +18,7 @@ $ ./pdfwebsigner.sh
 ```
     URL que será aberta no navegador: http://127.0.0.1:8888
 
-4. Realizar o o **upload do PDF** a ser assinado na interface Web
+4. Realizar o o **upload do arquivo PDF** a ser assinado na interface Web
 
 5. Os **arquivos PDF assinados** estarão disponíveis no diretório **files/pdf**
 
