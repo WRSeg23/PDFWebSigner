@@ -8,8 +8,13 @@ sudo docker images &> /dev/null
 [ $? -eq 0 ] || {
     echo ""
     print_line
-    echo "[ALERTA] É necessário ter o docker instalado e \"sudo docker\" operacional!"
+    echo "[ALERTA] necessário ter o docker instalado e o \"sudo docker\" operacional!"
+    echo ""
+    echo "INSTALE o docker:"
     echo "$ sudo apt-get install docker docker.io"
+    echo ""
+    echo "TESTE o docker instalado:"
+    echo "$ sudo docker info"
     print_line
     echo ""
     exit

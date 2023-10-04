@@ -22,5 +22,5 @@ $ ./pdfwebsigner.sh
 
 5. Os **arquivos PDF assinados** estarão disponíveis no diretório **files/pdf**
 
-## [Objetivos, Configuração, Instalação detalhada](https://github.com/WRSeg23/PDFWebSigner/blob/main/INSTALL.md)
+## [Objetivos, Configuração, Instalação detalhada](https://github.com/WRSeg23/PDFWebSigner/blob/main/etc/INSTALL.md)
 
