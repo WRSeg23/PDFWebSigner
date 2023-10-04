@@ -15,6 +15,8 @@ sudo docker images &> /dev/null
     exit
 }
 
+[ -d logs ] || { mkdir logs; }
+
 echo ""
 print_line
 echo -n "Inicializando o container Docker ... "
