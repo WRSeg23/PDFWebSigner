@@ -2,7 +2,7 @@
 
 echo "========================================================"
 echo -n "Inicializando o container Docker ... "
-./run_demo_docker.sh &> logs/demo_docker.log &  
+./run_demo_docker.sh pull &> logs/demo_docker.log &  
 sleep 3
 echo "done."
 echo "========================================================"
